@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Animals for Sale · Willow Bend Farm</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="animals.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="index.html">Willow Bend Farm</a>
+  <nav><a href="food.html">Food</a><a class="active" href="animals.html">Animals</a><a href="supplies.html">Supplies</a><a class="hide" href="index.html#visit">Visit</a><a class="hide" href="index.html#contact">Contact</a>
+  <button class="cartbtn" id="openCart" aria-label="Open basket">Basket (<span id="count">0</span>)</button></nav>
+</div></header>
+
+<main>
+<div class="hero"><div class="wrap">
+  <div>
+    <h1>Healthy animals, raised outdoors.</h1>
+    <p>Cows, chickens, goats and more from our own herds and flocks. Every animal is vet checked, and you are welcome to meet the parents and see the pasture.</p>
+    <a class="btn" href="#listings">See animals for sale</a>
+  </div>
+  <div class="board" aria-label="Before you buy">
+    <h2>Before you buy</h2>
+    <ul>
+      <li><span>Vet health certificate</span><span>Included</span></li>
+      <li><span>Visit and meet the animal</span><span>Any day</span></li>
+      <li><span>Delivery within 100 km</span><span>On request</span></li>
+      <li><span>Deposit to reserve</span><span>20%</span></li>
+    </ul>
+  </div>
+</div></div>
+
+<section id="listings"><div class="wrap">
+  <h2>Animals for sale</h2>
+  <p class="sub">Tap “Ask about this animal” to message us on WhatsApp with the details already filled in.</p>
+  <div class="filters" id="aFilters" role="group" aria-label="Filter by animal"></div>
+  <div class="tools">
+    <input id="aSearch" type="search" placeholder="Search breed or name" aria-label="Search animals">
+    <select id="aSort" aria-label="Sort animals">
+      <option value="new">Newest first</option>
+      <option value="low">Price: low to high</option>
+      <option value="high">Price: high to low</option>
+    </select>
+    <label class="check"><input type="checkbox" id="aHide"> Hide reserved</label>
+  </div>
+  <div class="grid animals" id="aGrid"></div>
+  <div class="info">
+    <div><h3>Health first</h3><p>Vaccinations and a vet check are done before sale. You get the paperwork.</p></div>
+    <div><h3>Visit before you decide</h3><p>Come and see the animal and how it lives. Call ahead so we can have it ready.</p></div>
+    <div><h3>Moving animals</h3><p>Cattle and goats need registration and movement papers. We help you fill them in.</p></div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">© <span id="yr"></span> Willow Bend Farm · <a href="tel:+37060000000">+370 600 00000</a> · hello@willowbend.example</div></footer>
+
+<div class="veil" id="veil"></div>
+<aside class="drawer" id="drawer" aria-label="Basket" aria-hidden="true">
+  <header><h3>Your basket</h3><button class="x" id="closeCart" aria-label="Close basket">×</button></header>
+  <div class="items" id="items"></div>
+  <div class="total"><span>Total</span><span id="total">€0.00</span></div>
+  <form id="orderForm">
+    <input name="name" placeholder="Your name" required autocomplete="name" aria-label="Your name">
+    <input name="phone" placeholder="Phone number" required autocomplete="tel" aria-label="Phone number">
+    <input name="pickup" placeholder="Pickup day (e.g. Saturday market)" required aria-label="Pickup day">
+    <button class="btn" type="submit">Send order on WhatsApp</button>
+    <button class="chip" type="button" id="emailOrder">Send order by email instead</button>
+  </form>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="animals.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Farm Supplies · Willow Bend Farm</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="supplies.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="index.html">Willow Bend Farm</a>
+  <nav><a href="food.html">Food</a><a href="animals.html">Animals</a><a class="active" href="supplies.html">Supplies</a><a class="hide" href="index.html#visit">Visit</a><a class="hide" href="index.html#contact">Contact</a>
+  <button class="cartbtn" id="openCart" aria-label="Open basket">Basket (<span id="count">0</span>)</button></nav>
+</div></header>
+
+<main>
+<div class="hero"><div class="wrap">
+  <div>
+    <h1>Everything your farm needs.</h1>
+    <p>Animal feed, fencing, drinkers, milking and egg equipment and everyday tools, picked by farmers for farmers. Add items to the same basket as your fresh produce.</p>
+    <a class="btn" href="#gear">Browse farm supplies</a>
+  </div>
+  <div class="board" aria-label="Good to know">
+    <h2>Good to know</h2>
+    <ul>
+      <li><span>Collect at the farm gate</span><span>Free</span></li>
+      <li><span>Delivery within 100 km</span><span>On request</span></li>
+      <li><span>Large equipment</span><span>Order ahead</span></li>
+      <li><span>Advice on what to choose</span><span>Free</span></li>
+    </ul>
+  </div>
+</div></div>
+
+<section id="gear"><div class="wrap">
+  <h2>Farm supplies</h2>
+  <p class="sub">Prices in euros. Heavy items such as feed sacks and machines are best collected, or ask us about delivery.</p>
+  <div class="filters" id="sFilters" role="group" aria-label="Filter by supply type"></div>
+  <div class="tools">
+    <input id="sSearch" type="search" placeholder="Search feed, fencing, tools" aria-label="Search supplies">
+    <select id="sSort" aria-label="Sort supplies">
+      <option value="featured">Featured</option>
+      <option value="low">Price: low to high</option>
+      <option value="high">Price: high to low</option>
+      <option value="name">Name A to Z</option>
+    </select>
+    <label class="check"><input type="checkbox" id="sStock"> In stock only</label>
+  </div>
+  <div class="grid" id="sGrid"></div>
+  <div class="info">
+    <div><h3>Feed for every animal</h3><p>Hens, cows, goats, sheep and more. Not sure what to give? Ask us and we will help you choose.</p></div>
+    <div><h3>Same basket</h3><p>Add supplies to the basket together with eggs, honey and bread and send one order.</p></div>
+    <div><h3>Heavy items</h3><p>Feed sacks, troughs and machines are collected at the farm gate, or we can deliver within 100 km.</p></div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">© <span id="yr"></span> Willow Bend Farm · <a href="tel:+37060000000">+370 600 00000</a> · hello@willowbend.example</div></footer>
+
+<div class="veil" id="veil"></div>
+<aside class="drawer" id="drawer" aria-label="Basket" aria-hidden="true">
+  <header><h3>Your basket</h3><button class="x" id="closeCart" aria-label="Close basket">×</button></header>
+  <div class="items" id="items"></div>
+  <div class="total"><span>Total</span><span id="total">€0.00</span></div>
+  <form id="orderForm">
+    <input name="name" placeholder="Your name" required autocomplete="name" aria-label="Your name">
+    <input name="phone" placeholder="Phone number" required autocomplete="tel" aria-label="Phone number">
+    <input name="pickup" placeholder="Pickup day (e.g. Saturday market)" required aria-label="Pickup day">
+    <button class="btn" type="submit">Send order on WhatsApp</button>
+    <button class="chip" type="button" id="emailOrder">Send order by email instead</button>
+  </form>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="supplies.js"></script>
+</body>
+</html>

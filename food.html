@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fresh Food · Willow Bend Farm</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="food.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="index.html">Willow Bend Farm</a>
+  <nav><a class="active" href="food.html">Food</a><a href="animals.html">Animals</a><a href="supplies.html">Supplies</a><a class="hide" href="index.html#visit">Visit</a><a class="hide" href="index.html#contact">Contact</a>
+  <button class="cartbtn" id="openCart" aria-label="Open basket">Basket (<span id="count">0</span>)</button></nav>
+</div></header>
+
+<main>
+<div class="hero"><div class="wrap">
+  <div>
+    <h1>Picked this morning. On your table tonight.</h1>
+    <p>Eggs, vegetables, honey and bread from our family farm. Order online, collect at the farm gate or at Saturday’s market.</p>
+    <a class="btn" href="#shop">Shop this week’s harvest</a>
+  </div>
+  <div class="board" aria-label="Freshest today">
+    <h2>Fresh today</h2>
+    <ul id="boardList"></ul>
+  </div>
+</div></div>
+
+<section id="shop"><div class="wrap">
+  <h2>This week’s harvest</h2>
+  <p class="sub">Prices in euros. Stock is limited, so order early.</p>
+  <div class="filters" id="filters" role="group" aria-label="Filter by category"></div>
+  <div class="grid" id="grid"></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">© <span id="yr"></span> Willow Bend Farm · <a href="tel:+37060000000">+370 600 00000</a> · hello@willowbend.example</div></footer>
+
+<div class="veil" id="veil"></div>
+<aside class="drawer" id="drawer" aria-label="Basket" aria-hidden="true">
+  <header><h3>Your basket</h3><button class="x" id="closeCart" aria-label="Close basket">×</button></header>
+  <div class="items" id="items"></div>
+  <div class="total"><span>Total</span><span id="total">€0.00</span></div>
+  <form id="orderForm">
+    <input name="name" placeholder="Your name" required autocomplete="name" aria-label="Your name">
+    <input name="phone" placeholder="Phone number" required autocomplete="tel" aria-label="Phone number">
+    <input name="pickup" placeholder="Pickup day (e.g. Saturday market)" required aria-label="Pickup day">
+    <button class="btn" type="submit">Send order on WhatsApp</button>
+    <button class="chip" type="button" id="emailOrder">Send order by email instead</button>
+  </form>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="food.js"></script>
+</body>
+</html>

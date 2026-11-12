@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Willow Bend Farm</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="index.html">Willow Bend Farm</a>
+  <nav><a href="food.html">Food</a><a href="animals.html">Animals</a><a href="supplies.html">Supplies</a><a class="hide" href="#visit">Visit</a><a class="hide" href="#contact">Contact</a>
+  <button class="cartbtn" id="openCart" aria-label="Open basket">Basket (<span id="count">0</span>)</button></nav>
+</div></header>
+
+<main>
+<div class="hero"><div class="wrap">
+  <div>
+    <h1>Picked this morning. On your table tonight.</h1>
+    <p>Eggs, vegetables, honey and bread from our family farm. We also sell healthy animals and everything you need to look after them. Order online, collect at the farm gate or at Saturday’s market.</p>
+    <a class="btn" href="food.html">Shop this week’s harvest</a>
+  </div>
+  <div class="board" aria-label="Freshest today">
+    <h2>Fresh today</h2>
+    <ul id="boardList"></ul>
+  </div>
+</div></div>
+
+<section><div class="wrap">
+  <h2>What we offer</h2>
+  <p class="sub">Choose a section to start.</p>
+  <div class="cats">
+    <a class="cat-card" href="food.html">
+      <span class="ico" aria-hidden="true">🥕</span>
+      <h3>Fresh food</h3>
+      <p>Eggs, vegetables, honey, bread and jam from our own fields and kitchen.</p>
+      <span class="go">Shop food →</span>
+    </a>
+    <a class="cat-card" href="animals.html">
+      <span class="ico" aria-hidden="true">🐄</span>
+      <h3>Animals for sale</h3>
+      <p>Cows, chickens, goats and more. Vet checked and raised outdoors.</p>
+      <span class="go">See animals →</span>
+    </a>
+    <a class="cat-card" href="supplies.html">
+      <span class="ico" aria-hidden="true">🌾</span>
+      <h3>Farm supplies</h3>
+      <p>Animal feed, fencing, drinkers, milking equipment and everyday tools.</p>
+      <span class="go">Browse supplies →</span>
+    </a>
+  </div>
+</div></section>
+
+<section id="visit" style="background:var(--surface);border-block:1px solid var(--line)"><div class="wrap about">
+  <div>
+    <h2>Our story</h2>
+    <p>Willow Bend has been in the Kask family for three generations. We farm 40 acres without synthetic sprays, keep 200 free-range hens, and look after 30 hives along the river.</p>
+    <p>Everything in the shop comes from our own fields or from neighbours within ten kilometres.</p>
+  </div>
+  <div class="visit">
+    <h3 style="margin-bottom:10px">Farm gate hours</h3>
+    <table id="hours"></table>
+    <p class="sub" style="margin:14px 0 0">Willow Bend Road 12, near Vilnius<br>Free parking. Dogs on leads welcome.</p>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <h2>Get in touch</h2>
+  <p class="sub">Questions about orders, animals, wholesale or farm visits? Send us a message.</p>
+  <form class="msg" id="msgForm">
+    <label>Your name<input name="name" required autocomplete="name"></label>
+    <label>Your email<input name="email" type="email" required autocomplete="email"></label>
+    <label>Message<textarea name="text" rows="4" required></textarea></label>
+    <button class="btn" type="submit">Send message</button>
+  </form>
+</div></section>
+</main>
+
+<footer><div class="wrap">© <span id="yr"></span> Willow Bend Farm · <a href="tel:+37060000000">+370 600 00000</a> · hello@willowbend.example</div></footer>
+
+<div class="veil" id="veil"></div>
+<aside class="drawer" id="drawer" aria-label="Basket" aria-hidden="true">
+  <header><h3>Your basket</h3><button class="x" id="closeCart" aria-label="Close basket">×</button></header>
+  <div class="items" id="items"></div>
+  <div class="total"><span>Total</span><span id="total">€0.00</span></div>
+  <form id="orderForm">
+    <input name="name" placeholder="Your name" required autocomplete="name" aria-label="Your name">
+    <input name="phone" placeholder="Phone number" required autocomplete="tel" aria-label="Phone number">
+    <input name="pickup" placeholder="Pickup day (e.g. Saturday market)" required aria-label="Pickup day">
+    <button class="btn" type="submit">Send order on WhatsApp</button>
+    <button class="chip" type="button" id="emailOrder">Send order by email instead</button>
+  </form>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="index.js"></script>
+</body>
+</html>
